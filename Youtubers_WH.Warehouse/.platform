@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "Youtubers_WH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7ad05520-d5fa-9a27-45a1-63bf75bd35ce"
+  }
+}

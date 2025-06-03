@@ -1,0 +1,108 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "e9952bab-3a5b-9686-4fde-c9700638f8ca",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "raw processing",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "34532fa5-5638-b5e6-4c88-0d47fc7b001f",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "silver processing",
+        "dependsOn": [
+          {
+            "activity": "raw processing",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c38e42f3-f1eb-a81d-4d08-4aa62d1015cc",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "refresh SQl endpoint",
+        "dependsOn": [
+          {
+            "activity": "silver processing",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "SqlServerStoredProcedure",
+        "typeProperties": {
+          "storedProcedureName": "[dbo].[sp_loadStoredProcedures]"
+        },
+        "linkedService": {
+          "name": "Youtubers_WH",
+          "properties": {
+            "type": "DataWarehouse",
+            "typeProperties": {
+              "artifactId": "75bd35ce-63bf-45a1-9a27-d5fa7ad05520",
+              "endpoint": "xt5ytmuaefdudosvbltiljpkaq-dleib3eoyueelal4c73meu7yhi.datawarehouse.fabric.microsoft.com",
+              "workspaceId": "ec80c81a-c58e-4508-817c-17f6c253f83a"
+            },
+            "annotations": []
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Execute Stored procedures",
+        "dependsOn": [
+          {
+            "activity": "refresh SQl endpoint",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "_inlineInstallationEnabled": {
+        "type": "bool",
+        "defaultValue": true
+      }
+    }
+  }
+}

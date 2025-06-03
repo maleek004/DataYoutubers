@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "youtubers_LH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d38f8694-244f-b7c3-4499-16f45c8c217e"
+  }
+}

@@ -1,0 +1,553 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "channelDetails_gold",
+        "sourceLineageTag": "[dbo].[channelDetails_gold]",
+        "columns": [
+          {
+            "name": "Channel Key",
+            "dataType": "int64",
+            "sourceColumn": "Channel Key",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Channel Key",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "string",
+            "sourceColumn": "Channel ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Channel ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Channel Name",
+            "dataType": "string",
+            "sourceColumn": "Channel Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Channel Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Channel Description",
+            "dataType": "string",
+            "sourceColumn": "Channel Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Channel Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Created At",
+            "dataType": "dateTime",
+            "sourceColumn": "Created At",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Created At",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Thumbnail URL",
+            "dataType": "string",
+            "sourceColumn": "Thumbnail URL",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Thumbnail URL",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Valid From",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid From",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Valid From",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Valid To",
+            "dataType": "dateTime",
+            "sourceColumn": "Valid To",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Valid To",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Is Current",
+            "dataType": "boolean",
+            "sourceColumn": "Is Current",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "Is Current",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Is Deleted",
+            "dataType": "boolean",
+            "sourceColumn": "Is Deleted",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "Is Deleted",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "channelDetails_gold",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "channelSnapshot_gold",
+        "sourceLineageTag": "[dbo].[channelSnapshot_gold]",
+        "columns": [
+          {
+            "name": "Snapshot Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Snapshot Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "Snapshot Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "string",
+            "sourceColumn": "Channel ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Channel ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Likes",
+            "dataType": "int64",
+            "sourceColumn": "Likes",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Likes",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Views",
+            "dataType": "int64",
+            "sourceColumn": "Views",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Views",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Subscribers",
+            "dataType": "int64",
+            "sourceColumn": "Subscribers",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Subscribers",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Videos",
+            "dataType": "int64",
+            "sourceColumn": "Videos",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Videos",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "channelSnapshot_gold",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "videoDetails_gold",
+        "sourceLineageTag": "[dbo].[videoDetails_gold]",
+        "columns": [
+          {
+            "name": "Video Key",
+            "dataType": "int64",
+            "sourceColumn": "Video Key",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Video Key",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "string",
+            "sourceColumn": "Channel ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Channel ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Release Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Release Date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Release Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Scheduled Start Time",
+            "dataType": "string",
+            "sourceColumn": "Scheduled Start Time",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Scheduled Start Time",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Title",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Duration(mins)",
+            "dataType": "int64",
+            "sourceColumn": "Duration(mins)",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Duration(mins)",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Views",
+            "dataType": "int64",
+            "sourceColumn": "Views",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Views",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Likes",
+            "dataType": "int64",
+            "sourceColumn": "Likes",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Likes",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Comments",
+            "dataType": "int64",
+            "sourceColumn": "Comments",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Comments",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "URL",
+            "dataType": "string",
+            "sourceColumn": "URL",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "URL",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Thumbnail",
+            "dataType": "string",
+            "sourceColumn": "Thumbnail",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Thumbnail",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Video ID",
+            "dataType": "string",
+            "sourceColumn": "Video ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Video ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "videoDetails_gold",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "metadata",
+        "sourceLineageTag": "[metadata].[metadata]",
+        "columns": [
+          {
+            "name": "channel_ID",
+            "dataType": "string",
+            "sourceColumn": "channel_ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "channel_ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "metadata",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "metadata"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

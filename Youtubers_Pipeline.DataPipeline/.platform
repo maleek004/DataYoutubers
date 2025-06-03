@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "Youtubers_Pipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "53464c11-6611-82ec-4871-48a7428c7c1f"
+  }
+}
