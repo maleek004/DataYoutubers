@@ -97,12 +97,6 @@
           }
         ]
       }
-    ],
-    "parameters": {
-      "_inlineInstallationEnabled": {
-        "type": "bool",
-        "defaultValue": true
-      }
-    }
+    ]
   }
 }
