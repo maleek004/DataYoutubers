@@ -43,7 +43,7 @@
       {
         "type": "TridentNotebook",
         "typeProperties": {
-          "notebookId": "c38e42f3-f1eb-a81d-4d08-4aa62d1015cc",
+          "notebookId": "94e293d6-cca3-978c-406d-14fed43c89e8",
           "workspaceId": "00000000-0000-0000-0000-000000000000"
         },
         "policy": {
