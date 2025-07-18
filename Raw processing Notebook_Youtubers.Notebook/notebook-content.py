@@ -65,7 +65,7 @@ youtube = build(
 # CELL ********************
 
 conn = notebookutils.data.connect_to_artifact("Youtubers_WH")
-channel_ids = conn.query("SELECT channel_ID FROM metadata.metadata;").channel_ID.tolist()
+channel_ids = conn.query("SELECT DISTINCT channel_ID FROM metadata.metadata;").channel_ID.tolist()
 print(len(channel_ids))
 
 

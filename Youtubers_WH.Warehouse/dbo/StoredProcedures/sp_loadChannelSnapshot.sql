@@ -10,11 +10,11 @@ SELECT
     c.no_of_views,
     c.subscribers_count,
     c.no_of_videos
-FROM [youtubers_LH].[dbo].[silver_video_details] v
-JOIN [youtubers_LH].[dbo].[silver_channel_details] c
-    ON v.channelID = c.channel_ID
+FROM [youtubers_LH].[dbo].[silver_channel_details] c
+LEFT JOIN [youtubers_LH].[dbo].[silver_video_details] v
+   ON  c.channel_ID =   v.channelID
 WHERE NOT EXISTS (
-    SELECT 1 FROM [Youtubers_WH].[dbo].[channelSnapshot_gold] snap
+   SELECT 1 FROM [Youtubers_WH].[dbo].[channelSnapshot_gold] snap
     WHERE snap.[Channel ID] = c.channel_ID AND snap.[Snapshot Date] = c.loadDate
 )
 GROUP BY 
@@ -23,4 +23,4 @@ GROUP BY
     c.no_of_views,
     c.subscribers_count,
     c.no_of_videos;
-    END;
+END;

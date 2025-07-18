@@ -296,6 +296,718 @@
         ]
       },
       {
+        "name": "channels_cumm_stats",
+        "sourceLineageTag": "[dbo].[channels_cumm_stats]",
+        "columns": [
+          {
+            "name": "snapshot_date",
+            "dataType": "dateTime",
+            "sourceColumn": "snapshot_date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "snapshot_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "channel_id",
+            "dataType": "string",
+            "sourceColumn": "channel_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "channel_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "channel_name",
+            "dataType": "string",
+            "sourceColumn": "channel_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "channel_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "channel_description",
+            "dataType": "string",
+            "sourceColumn": "channel_description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "channel_description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "thumbnail_url",
+            "dataType": "string",
+            "sourceColumn": "thumbnail_url",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "thumbnail_url",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "age_months",
+            "dataType": "int64",
+            "sourceColumn": "age_months",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "age_months",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "latest_videos",
+            "dataType": "int64",
+            "sourceColumn": "latest_videos",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "latest_videos",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "latest_subscribers",
+            "dataType": "int64",
+            "sourceColumn": "latest_subscribers",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "latest_subscribers",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "latest_views",
+            "dataType": "int64",
+            "sourceColumn": "latest_views",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "latest_views",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "latest_likes",
+            "dataType": "int64",
+            "sourceColumn": "latest_likes",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "latest_likes",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "videos_prev_day",
+            "dataType": "int64",
+            "sourceColumn": "videos_prev_day",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "videos_prev_day",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "subscribers_prev_day",
+            "dataType": "int64",
+            "sourceColumn": "subscribers_prev_day",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "subscribers_prev_day",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "views_prev_day",
+            "dataType": "int64",
+            "sourceColumn": "views_prev_day",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "views_prev_day",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes_prev_day",
+            "dataType": "int64",
+            "sourceColumn": "likes_prev_day",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes_prev_day",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "videos_7days",
+            "dataType": "int64",
+            "sourceColumn": "videos_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "videos_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "subscribers_7days",
+            "dataType": "int64",
+            "sourceColumn": "subscribers_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "subscribers_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "views_7days",
+            "dataType": "int64",
+            "sourceColumn": "views_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "views_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes_7days",
+            "dataType": "int64",
+            "sourceColumn": "likes_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "videos_30days",
+            "dataType": "int64",
+            "sourceColumn": "videos_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "videos_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "subscribers_30days",
+            "dataType": "int64",
+            "sourceColumn": "subscribers_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "subscribers_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "views_30days",
+            "dataType": "int64",
+            "sourceColumn": "views_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "views_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes_30days",
+            "dataType": "int64",
+            "sourceColumn": "likes_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_videos_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_videos_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_videos_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_subscribers_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_subscribers_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_subscribers_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_videos_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_videos_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_videos_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_subscribers_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_subscribers_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_subscribers_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_videos_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_videos_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_videos_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_subscribers_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_subscribers_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_subscribers_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_subscribers_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_subscribers_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_subscribers_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_videos_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_videos_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_videos_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_subscribers_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_subscribers_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_subscribers_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_videos_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_videos_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_videos_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_subscribers_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_subscribers_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_subscribers_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_videos_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_videos_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_videos_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "age_category",
+            "dataType": "string",
+            "sourceColumn": "age_category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "age_category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "channels_cumm_stats",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
         "name": "videoDetails_gold",
         "sourceLineageTag": "[dbo].[videoDetails_gold]",
         "columns": [
@@ -481,6 +1193,1410 @@
             "source": {
               "type": "entity",
               "entityName": "videoDetails_gold",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "videoSnapshots_gold",
+        "sourceLineageTag": "[dbo].[videoSnapshots_gold]",
+        "columns": [
+          {
+            "name": "Video Key",
+            "dataType": "int64",
+            "sourceColumn": "Video Key",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Video Key",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Video ID",
+            "dataType": "string",
+            "sourceColumn": "Video ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Video ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Views",
+            "dataType": "int64",
+            "sourceColumn": "Views",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Views",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Likes",
+            "dataType": "int64",
+            "sourceColumn": "Likes",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Likes",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Comments",
+            "dataType": "int64",
+            "sourceColumn": "Comments",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Comments",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Snapshot Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Snapshot Date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Snapshot Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "videoSnapshots_gold",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "video_cumm_stats",
+        "sourceLineageTag": "[dbo].[video_cumm_stats]",
+        "columns": [
+          {
+            "name": "LastestSnapshot",
+            "dataType": "dateTime",
+            "sourceColumn": "LastestSnapshot",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "LastestSnapshot",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Video ID",
+            "dataType": "string",
+            "sourceColumn": "Video ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Video ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "string",
+            "sourceColumn": "Channel ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Channel ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Release Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Release Date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "Release Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Scheduled Start Time",
+            "dataType": "string",
+            "sourceColumn": "Scheduled Start Time",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Scheduled Start Time",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Title",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Duration(mins)",
+            "dataType": "int64",
+            "sourceColumn": "Duration(mins)",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Duration(mins)",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Thumbnail",
+            "dataType": "string",
+            "sourceColumn": "Thumbnail",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Thumbnail",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "URL",
+            "dataType": "string",
+            "sourceColumn": "URL",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "URL",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "views_latest",
+            "dataType": "int64",
+            "sourceColumn": "views_latest",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "views_latest",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes_latest",
+            "dataType": "int64",
+            "sourceColumn": "likes_latest",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes_latest",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comments_latest",
+            "dataType": "int64",
+            "sourceColumn": "comments_latest",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "comments_latest",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "viewsPrevDay",
+            "dataType": "int64",
+            "sourceColumn": "viewsPrevDay",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "viewsPrevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likesPrevDay",
+            "dataType": "int64",
+            "sourceColumn": "likesPrevDay",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likesPrevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "commentsPrevDay",
+            "dataType": "int64",
+            "sourceColumn": "commentsPrevDay",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "commentsPrevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "views7Days",
+            "dataType": "int64",
+            "sourceColumn": "views7Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "views7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes7Days",
+            "dataType": "int64",
+            "sourceColumn": "likes7Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comments7Days",
+            "dataType": "int64",
+            "sourceColumn": "comments7Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "comments7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "views30Days",
+            "dataType": "int64",
+            "sourceColumn": "views30Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "views30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes30Days",
+            "dataType": "int64",
+            "sourceColumn": "likes30Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comments30Days",
+            "dataType": "int64",
+            "sourceColumn": "comments30Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "comments30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_prevDay",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_prevDay",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_prevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_prevDay",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_prevDay",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_prevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_comments_prevDay",
+            "dataType": "int64",
+            "sourceColumn": "delta_comments_prevDay",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_comments_prevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_7Days",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_7Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_7Days",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_7Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_comments_7Days",
+            "dataType": "int64",
+            "sourceColumn": "delta_comments_7Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_comments_7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_30Days",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_30Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_30Days",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_30Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_comments_30Days",
+            "dataType": "int64",
+            "sourceColumn": "delta_comments_30Days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_comments_30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_prevDay",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_prevDay",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_prevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_prevDay",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_prevDay",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_prevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_comments_prevDay",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_comments_prevDay",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_comments_prevDay",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_7Days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_7Days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_7Days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_7Days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_comments_7Days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_comments_7Days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_comments_7Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_30Days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_30Days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_30Days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_30Days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_comments_30Days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_comments_30Days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_comments_30Days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "video_cumm_stats",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "vw_ChannelPerformance",
+        "sourceLineageTag": "[dbo].[vw_ChannelPerformance]",
+        "columns": [
+          {
+            "name": "channel_id",
+            "dataType": "string",
+            "sourceColumn": "channel_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "channel_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "channel_name",
+            "dataType": "string",
+            "sourceColumn": "channel_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "channel_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "channel_description",
+            "dataType": "string",
+            "sourceColumn": "channel_description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "channel_description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "thumbnail_url",
+            "dataType": "string",
+            "sourceColumn": "thumbnail_url",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "thumbnail_url",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "age_months",
+            "dataType": "int64",
+            "sourceColumn": "age_months",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "age_months",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_videos",
+            "dataType": "int64",
+            "sourceColumn": "total_videos",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_videos",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "subscribers",
+            "dataType": "int64",
+            "sourceColumn": "subscribers",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "subscribers",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_views",
+            "dataType": "int64",
+            "sourceColumn": "total_views",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_views",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes",
+            "dataType": "int64",
+            "sourceColumn": "likes",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_videos_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "total_videos_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_videos_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "subscribers_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "subscribers_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "subscribers_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_views_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "total_views_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_views_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "likes_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_videos_7days",
+            "dataType": "int64",
+            "sourceColumn": "total_videos_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_videos_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "subscribers_7days",
+            "dataType": "int64",
+            "sourceColumn": "subscribers_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "subscribers_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_views_7days",
+            "dataType": "int64",
+            "sourceColumn": "total_views_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_views_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes_7days",
+            "dataType": "int64",
+            "sourceColumn": "likes_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_videos_30days",
+            "dataType": "int64",
+            "sourceColumn": "total_videos_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_videos_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "subscribers_30days",
+            "dataType": "int64",
+            "sourceColumn": "subscribers_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "subscribers_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_views_30days",
+            "dataType": "int64",
+            "sourceColumn": "total_views_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_views_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "likes_30days",
+            "dataType": "int64",
+            "sourceColumn": "likes_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "likes_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_videos_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_videos_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_videos_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_subscribers_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_subscribers_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_subscribers_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_yesterday",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_yesterday",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_videos_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_videos_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_videos_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_subscribers_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_subscribers_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_subscribers_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_7days",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_7days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_videos_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_videos_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_videos_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_subscribers_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_subscribers_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_subscribers_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_views_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_views_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_views_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "delta_likes_30days",
+            "dataType": "int64",
+            "sourceColumn": "delta_likes_30days",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "delta_likes_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_subscribers_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_subscribers_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_subscribers_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_videos_yesterday",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_videos_yesterday",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_videos_yesterday",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_subscribers_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_subscribers_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_subscribers_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_videos_7days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_videos_7days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_videos_7days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_subscribers_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_subscribers_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_subscribers_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_views_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_views_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_views_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_likes_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_likes_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_likes_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "growth_rate_videos_30days",
+            "dataType": "decimal",
+            "sourceColumn": "growth_rate_videos_30days",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "growth_rate_videos_30days",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "age_category",
+            "dataType": "string",
+            "sourceColumn": "age_category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "age_category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "vw_ChannelPerformance",
               "expressionSource": "DatabaseQuery",
               "schemaName": "dbo"
             }
