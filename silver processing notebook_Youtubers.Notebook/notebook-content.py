@@ -28,7 +28,7 @@
 
 # CELL ********************
 
-from datetime import datetime , timezone
+from datetime import datetime , timezone , timedelta
 import pandas as pd
 import isodate
 import math
@@ -41,6 +41,17 @@ videos_df = pd.read_csv("/lakehouse/default/Files/videos.csv")
 print(videos_df.shape)
 
 
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+datetime.now().date() - timedelta(days=1)
 
 # METADATA ********************
 
@@ -91,6 +102,7 @@ def transform_channels_silver(df):
 
     #add load date column
     df['loadDate'] = datetime.now().date()
+    #df['loadDate'] = datetime.now().date() - timedelta(days=1)
 
     return df
 
@@ -209,6 +221,7 @@ def transform_videos_silver(df, lang_map):
 
     # Add load date 
     df['loadDate'] = datetime.now().date()
+    #df['loadDate'] = datetime.now().date() - timedelta(days=1)
 
     return df
 
