@@ -26,8 +26,7 @@
 !pip install google-api-python-client > /dev/null 2>&1
 import pandas as pd
 from googleapiclient.discovery import build 
-import pandas as pd 
-from IPython.display import JSON
+from IPython.display import JSON 
 
 
 # METADATA ********************
