@@ -51,7 +51,7 @@ print(videos_df.shape)
 
 # CELL ********************
 
-datetime.now().date() - timedelta(days=1)
+# datetime.now().date() - timedelta(days=1)
 
 # METADATA ********************
 
