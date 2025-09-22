@@ -110,7 +110,7 @@ lang_map = {
 # META }
 
 # CELL ********************
-# added this column from the github web editor
+
 def transform_videos_silver(df, lang_map):
     """
     Transforms the silver layer videos dataset by:
@@ -119,7 +119,7 @@ def transform_videos_silver(df, lang_map):
     3. Creating a 'duration_mins' column from the ISO 8601 duration.
     4. Dropping unnecessary columns.
     """
-    # Normalize language
+    # Normalize language . SOME EXTRA COMMENT FROM GITHUB'S VSCODE WEB EDITOR
     if 'language' in df.columns:
         df['language_clean'] = df['language'].replace(lang_map)
 
