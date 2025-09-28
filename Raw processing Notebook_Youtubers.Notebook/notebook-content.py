@@ -226,8 +226,8 @@ def get_video_details(youtube, videoID):
                 thumbnail = video['snippet'].get('thumbnails', {}).get('standard', {}).get('url', default_thumbnail_url)
                 video_details_dictionary['thumbnailURL'].append(thumbnail)
 
-                video_details_dictionary['videoType'].append(video['snippet'].get('liveBroadcastContent', 'none'))
-                video_details_dictionary['scheduledStartTime'].append(video.get('liveStreamingDetails', {}).get('scheduledStartTime', 'Not Live Streamed'))
+                video_details_dictionary['videoType'].append(video['snippet'].get('liveBroadcastContent', 'Not Live Streamed'))
+                video_details_dictionary['scheduledStartTime'].append(video.get('liveStreamingDetails', {}).get('scheduledStartTime', ''))
 
             print(f"Processed {len(batch)} videos from batch {i//50 + 1}")
 

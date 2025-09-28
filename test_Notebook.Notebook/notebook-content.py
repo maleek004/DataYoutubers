@@ -63,6 +63,65 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 # CELL ********************
 
+import pandas as pd
+videos_df = pd.read_csv("/lakehouse/default/Files/videos.csv")
+display(videos_df)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+display(videos_df['videoType'].value_counts().reset_index())
+# display(videos_df[''])
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+display(videos_df[~videos_df["duration"].fillna("").str.startswith("PT")])
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+len(videos_df[videos_df["scheduledStartTime"] == "Not Live Streamed"])
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+videos_df[(videos_df["scheduledStartTime"] == "Not Live Streamed") & (videos_df.videoType == "upcoming")].reset_index(drop=True)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
 import duckdb
 import pandas as pd
 import pyarrow
@@ -77,6 +136,19 @@ arrow_df = duckdb.sql("""
 
 df = arrow_df.to_pandas()
 df
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+video_dict = dict(zip(df["videoID"], df["videoTitle"]))
+video_dict
+
 
 # METADATA ********************
 
