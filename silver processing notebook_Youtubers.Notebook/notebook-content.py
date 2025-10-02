@@ -200,26 +200,54 @@ def transform_videos_silver(df, lang_map):
     2. Extracting only the date from the releaseDate column.
     3. Creating a 'duration_mins' column from the ISO 8601 duration.
     4. Dropping unnecessary columns.
+    5. Standardizing the videoType column into categories:
+       - 'none' → 'None'
+       - 'upcoming' with null scheduledStartTime → 'Live stream offline'
+       - 'upcoming' with scheduledStartTime in the past → 'Pending live stream'
+       - 'upcoming' with scheduledStartTime in the future → 'Upcoming'
     """
-    # Normalize language
+    # 1. Normalize language
     if 'language' in df.columns:
         df['language_clean'] = df['language'].replace(lang_map)
 
-    # Convert releaseDate to just date
+    # 2. Convert releaseDate to just date
     if 'releaseDate' in df.columns:
-        df['releaseDate'] = pd.to_datetime(df['releaseDate']).dt.date
+        df['releaseDate'] = pd.to_datetime(df['releaseDate'], errors='coerce').dt.date
 
-    # Convert ISO duration to minutes (rounded up)
+    # 3. Convert ISO duration to minutes (rounded up)
     if 'duration' in df.columns:
         df['duration_mins'] = df['duration'].apply(
-            lambda x: math.ceil(isodate.parse_duration(x).total_seconds() / 60) if pd.notnull(x) and isinstance(x, str) and x.startswith('PT') else 0
+            lambda x: math.ceil(isodate.parse_duration(x).total_seconds() / 60) 
+            if isinstance(x, str) and x != 'Unknown' and pd.notnull(x) 
+            else 0
         )
 
-    # Drop unwanted columns
+    # 4. Drop unwanted columns
     cols_to_drop = ['videoDescripton', 'Unnamed: 0']
     df = df.drop(columns=[col for col in cols_to_drop if col in df.columns], errors='ignore')
 
-    # Add load date 
+    # 5. Standardize videoType
+    if 'videoType' in df.columns:
+        # ensure scheduledStartTime is datetime
+        if 'scheduledStartTime' in df.columns:
+            df['scheduledStartTime'] = pd.to_datetime(df['scheduledStartTime'], errors='coerce')
+        now = pd.Timestamp.now(tz="UTC")
+
+        def categorize(row):
+            if row['videoType'] == 'none':
+                return 'None'
+            if row['videoType'] == 'upcoming':
+                if pd.isnull(row['scheduledStartTime']):
+                    return 'Live stream offline'
+                elif row['scheduledStartTime'] < now:
+                    return 'Pending live stream'
+                else:
+                    return 'Upcoming'
+            return 'Other'
+
+        df['videoType'] = df.apply(categorize, axis=1)
+
+    # 6. Add load date 
     df['loadDate'] = datetime.now().date()
     #df['loadDate'] = datetime.now().date() - timedelta(days=1)
 

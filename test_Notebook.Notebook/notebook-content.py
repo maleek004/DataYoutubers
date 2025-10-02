@@ -63,6 +63,36 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 # CELL ********************
 
+
+videos_df[
+        (videos_df['videoType'] == 'None') &
+        (videos_df['language_clean'].isin([
+            'English', 'English (US)', 'English (UK)',
+            'English (India)', 'English (Canada)',
+            'English (Australia)', 'English (Ireland)'
+        ]))
+    ][['videoTitle', 'videoID']].sample(10).set_index('videoTitle')['videoID'].to_dict()
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
 import pandas as pd
 videos_df = pd.read_csv("/lakehouse/default/Files/videos.csv")
 display(videos_df)
@@ -73,6 +103,26 @@ display(videos_df)
 # META   "language": "python",
 # META   "language_group": "jupyter_python"
 # META }
+
+# CELL ********************
+
+videos_df.shape
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# MARKDOWN ********************
+
+# ## Standardizing the videoType column
+# #### The video type is either 'none' or 'upcoming' from the API
+# #### A fraction (22/79) of the 'upcoming' videos have ***'null' scheduled start time***
+# #### 'upcoming' videos with ***'null' scheduled start time*** are cases of **'Live stream offline'**
+# #### cases where a video is upcoming and the ***scheduled start time is in the past*** , then that's a ***'Pending live stream'***
+# #### cases where a video is upcoming and the ***scheduled start time is in the future*** then that's the real upcoming video
 
 # CELL ********************
 
@@ -88,7 +138,19 @@ display(videos_df['videoType'].value_counts().reset_index())
 
 # CELL ********************
 
-display(videos_df[~videos_df["duration"].fillna("").str.startswith("PT")])
+display(videos_df[(videos_df['videoType'] == 'upcoming')])
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+display(videos_df[(~videos_df["duration"].fillna("").str.startswith("PT")) & (videos_df.scheduledStartTime.notnull())])
 
 
 # METADATA ********************
@@ -112,6 +174,35 @@ len(videos_df[videos_df["scheduledStartTime"] == "Not Live Streamed"])
 # CELL ********************
 
 videos_df[(videos_df["scheduledStartTime"] == "Not Live Streamed") & (videos_df.videoType == "upcoming")].reset_index(drop=True)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# MARKDOWN ********************
+
+# ## Standardizing the duration column 
+# #### Almost all  the duration (99.8%) starts with 'PT', the rest either starts with 'PxD' for videos that are days long or 'P0D' for upcoming videos or 'Unknown' when the video key is not found in the API's response
+
+# CELL ********************
+
+import isodate
+import math
+math.ceil(isodate.parse_duration('P0D').total_seconds() / 60)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "jupyter_python"
+# META }
+
+# CELL ********************
+
+videos_df[(~videos_df["duration"].fillna("").str.startswith("PT")) & (videos_df["duration"] != 'P0D')]
 
 # METADATA ********************
 
