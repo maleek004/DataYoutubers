@@ -220,7 +220,7 @@ def transform_videos_silver(df, lang_map):
     df = df.drop(columns=[col for col in cols_to_drop if col in df.columns], errors='ignore')
 
     # Add load date 
-    df['loadDate'] = datetime.now().date()
+    df['loadDate'] = datetime.now(tz=timezone.utc).date()
     #df['loadDate'] = datetime.now().date() - timedelta(days=1)
 
     return df

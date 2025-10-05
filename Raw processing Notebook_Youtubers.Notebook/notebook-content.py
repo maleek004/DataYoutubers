@@ -78,6 +78,22 @@ print(len(channel_ids))
 # CELL ********************
 
 def get_channel_details(youtube, channel_ids):
+    """
+    This function takes a Youtube API client and a list of channel IDs
+    and returns a dataframe containing the channel details.
+
+    Parameters
+    ----------
+    youtube : object
+        The Youtube API client.
+    channel_ids : list
+        A list of channel IDs.
+
+    Returns
+    -------
+    channels_df : pandas.DataFrame
+        A dataframe containing the channel details.
+    """
     channels_dictionary = {
         'channel_name': [],
         'channel_ID': [],
@@ -174,6 +190,22 @@ def get_video_ids(youtube, playlistIDs):
 # CELL ********************
 
 def get_video_details(youtube, videoID):
+    """
+    This function takes a Youtube API client and a list of video IDs
+    and returns a dataframe containing the video details.
+
+    Parameters
+    ----------
+    youtube : object
+        The Youtube API client.
+    videoID : list
+        A list of video IDs.
+
+    Returns
+    -------
+    df : pandas.DataFrame
+        A dataframe containing the video details.
+    """
     if not videoID:
         print("No video IDs provided.")
         return pd.DataFrame()
