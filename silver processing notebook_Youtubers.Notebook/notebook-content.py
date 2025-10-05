@@ -226,8 +226,6 @@ def transform_videos_silver(df, lang_map):
     cols_to_drop = ['videoDescripton', 'Unnamed: 0']
     df = df.drop(columns=[col for col in cols_to_drop if col in df.columns], errors='ignore')
 
-    
-    
     # 5. Standardize videoType
     if 'videoType' in df.columns:
         # ensure scheduledStartTime is datetime
