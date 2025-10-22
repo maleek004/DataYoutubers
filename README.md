@@ -35,3 +35,6 @@ This project is an end-to-end data solution built entirely in Microsoft Fabric t
 *   Explore the entire video library of any channel, with sorting options for release date, views, likes, or engagement.
 *   Compare multiple channels side by side.
 *   See the top-performing channels for each metric.
+
+
+https://docs.google.com/document/d/1bcZ8VN9GtBKTI6dFuvwD7aSeSWXze3YvIaC73ZFUkLw/edit?usp=sharing
