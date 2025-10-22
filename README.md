@@ -37,4 +37,3 @@ This project is an end-to-end data solution built entirely in Microsoft Fabric t
 *   See the top-performing channels for each metric.
 
 
-https://docs.google.com/document/d/1bcZ8VN9GtBKTI6dFuvwD7aSeSWXze3YvIaC73ZFUkLw/edit?usp=sharing
